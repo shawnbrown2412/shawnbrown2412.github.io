@@ -1,589 +1,78 @@
-/* =========================================
-   SHAWNTAY BROWN
-   Personal Portfolio
-   Baby Pink Theme
-   ========================================= */
+/* ---------- Currently ---------- */
 
+.current-section {
+    background: var(--white);
+}
 
-/* ---------- Color Palette ---------- */
+.current-grid {
+    display: grid;
 
-:root {
-    --pink-dark: #c77d92;
-    --pink-main: #d98fa3;
-    --pink-light: #fceef2;
-    --pink-soft: #fff7f9;
-    --pink-border: #efd5dc;
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
 
-    --text-dark: #29272a;
-    --text-medium: #5f5a5d;
-    --white: #ffffff;
+    gap: 20px;
+}
 
-    --shadow: 0 8px 25px rgba(190, 120, 140, 0.10);
+.current-card {
+    padding: 25px;
+
+    background: var(--pink-soft);
+
+    border: 1px solid var(--pink-border);
+    border-radius: 10px;
+}
+
+.current-card h3 {
+    margin-bottom: 8px;
+
+    font-size: 1.1rem;
+}
+
+.current-card p {
+    color: var(--text-medium);
+
+    font-size: 0.95rem;
 }
 
 
-/* ---------- General ---------- */
+/* ---------- Coursework Status ---------- */
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Helvetica,
-        Arial,
-        sans-serif;
+.coursework-card h4 {
+    margin-top: 22px;
+    margin-bottom: 8px;
 
     color: var(--text-dark);
-    background: var(--white);
-    line-height: 1.7;
-}
-
-a {
-    color: inherit;
-}
-
-
-/* ---------- Navigation ---------- */
-
-.site-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
-    background: rgba(255, 255, 255, 0.96);
-    border-bottom: 1px solid var(--pink-border);
-
-    backdrop-filter: blur(8px);
-}
-
-.nav-container {
-    max-width: 1150px;
-    margin: 0 auto;
-
-    padding: 18px 30px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.site-name {
-    text-decoration: none;
-
-    font-size: 1.25rem;
-    font-weight: 700;
-
-    color: var(--pink-dark);
-}
-
-.navigation {
-    display: flex;
-    gap: 25px;
-}
-
-.navigation a {
-    text-decoration: none;
-
-    color: var(--text-medium);
-
-    font-size: 0.94rem;
-    font-weight: 500;
-
-    transition: color 0.2s ease;
-}
-
-.navigation a:hover {
-    color: var(--pink-dark);
-}
-
-
-/* ---------- Hero ---------- */
-
-.hero {
-    background:
-        linear-gradient(
-            135deg,
-            var(--pink-soft) 0%,
-            #ffffff 65%
-        );
-
-    border-bottom: 1px solid var(--pink-border);
-}
-
-.hero-content {
-    max-width: 1150px;
-    margin: 0 auto;
-
-    padding: 120px 30px 115px;
-}
-
-.eyebrow,
-.section-label {
-    color: var(--pink-dark);
-
-    font-size: 0.78rem;
-    font-weight: 700;
-
-    letter-spacing: 0.16em;
-}
-
-.eyebrow {
-    margin-bottom: 18px;
-}
-
-.hero h1 {
-    font-size: clamp(3rem, 7vw, 5.5rem);
-    line-height: 1.05;
-
-    margin-bottom: 18px;
-
-    letter-spacing: -0.04em;
-}
-
-.hero-description {
-    max-width: 720px;
-
-    color: var(--text-medium);
-
-    font-size: 1.15rem;
-
-    margin-bottom: 32px;
-}
-
-
-/* ---------- Buttons ---------- */
-
-.hero-buttons {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-}
-
-.button {
-    display: inline-block;
-
-    padding: 11px 22px;
-
-    border-radius: 6px;
-
-    text-decoration: none;
-
-    font-weight: 600;
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        background 0.2s ease;
-}
-
-.button:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow);
-}
-
-.button-primary {
-    color: var(--white);
-    background: var(--pink-main);
-}
-
-.button-primary:hover {
-    background: var(--pink-dark);
-}
-
-.button-secondary {
-    color: var(--pink-dark);
-
-    border: 1px solid var(--pink-main);
-
-    background: var(--white);
-}
-
-
-/* ---------- Sections ---------- */
-
-.section {
-    max-width: 1150px;
-
-    margin: 0 auto;
-
-    padding: 90px 30px;
-}
-
-.section-pink {
-    max-width: none;
-
-    padding-left: max(30px, calc((100vw - 1090px) / 2));
-    padding-right: max(30px, calc((100vw - 1090px) / 2));
-
-    background: var(--pink-soft);
-
-    border-top: 1px solid var(--pink-border);
-    border-bottom: 1px solid var(--pink-border);
-}
-
-.section-heading {
-    margin-bottom: 40px;
-}
-
-.section-heading h2 {
-    margin-top: 8px;
-    margin-bottom: 14px;
-
-    font-size: 2.3rem;
-    line-height: 1.2;
-}
-
-.section-intro {
-    max-width: 700px;
-
-    color: var(--text-medium);
-}
-
-
-/* ---------- About ---------- */
-
-.about-content {
-    max-width: 800px;
-}
-
-.about-content p {
-    margin-bottom: 20px;
-
-    color: var(--text-medium);
-
-    font-size: 1.05rem;
-}
-
-
-/* ---------- Projects ---------- */
-
-.project-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-    gap: 25px;
-}
-
-.project-card {
-    padding: 30px;
-
-    background: var(--white);
-
-    border: 1px solid var(--pink-border);
-    border-radius: 10px;
-
-    box-shadow: var(--shadow);
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-
-    box-shadow:
-        0 14px 35px rgba(190, 120, 140, 0.15);
-}
-
-.project-number {
-    margin-bottom: 18px;
-
-    color: var(--pink-main);
-
-    font-size: 0.85rem;
-    font-weight: 700;
-}
-
-.project-card h3 {
-    margin-bottom: 12px;
-
-    font-size: 1.3rem;
-}
-
-.project-card p {
-    margin-bottom: 22px;
-
-    color: var(--text-medium);
-}
-
-.project-tags {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 7px;
-
-    margin-bottom: 22px;
-}
-
-.project-tags span {
-    padding: 4px 9px;
-
-    border-radius: 20px;
-
-    background: var(--pink-light);
-
-    color: var(--pink-dark);
-
-    font-size: 0.75rem;
-    font-weight: 600;
-}
-
-.project-link {
-    color: var(--pink-dark);
-
-    font-weight: 600;
-
-    text-decoration: none;
-}
-
-.project-link:hover {
-    text-decoration: underline;
-}
-
-
-/* ---------- Teaching ---------- */
-
-.experience-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-    gap: 25px;
-}
-
-.experience-card {
-    padding: 30px;
-
-    border-left: 4px solid var(--pink-main);
-
-    background: var(--pink-soft);
-}
-
-.experience-date {
-    margin-bottom: 7px;
-
-    color: var(--pink-dark);
-
-    font-size: 0.82rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-}
-
-.experience-card h3 {
-    margin-bottom: 4px;
-
-    font-size: 1.3rem;
-}
-
-.institution {
-    margin-bottom: 15px;
-
-    color: var(--pink-dark);
-
-    font-weight: 600;
-}
-
-.experience-card > p:last-child {
-    color: var(--text-medium);
-}
-
-
-/* ---------- Coursework ---------- */
-
-.coursework-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-    gap: 25px;
-}
-
-.coursework-card {
-    padding: 30px;
-
-    background: var(--white);
-
-    border: 1px solid var(--pink-border);
-    border-radius: 10px;
-}
-
-.coursework-card h3 {
-    margin-bottom: 5px;
-}
-
-.coursework-card > p {
-    margin-bottom: 18px;
-
-    color: var(--pink-dark);
-
-    font-weight: 600;
-}
-
-.coursework-card ul {
-    padding-left: 20px;
-
-    color: var(--text-medium);
-}
-
-.coursework-card li {
-    margin-bottom: 6px;
-}
-
-
-/* ---------- CV ---------- */
-
-.cv-section {
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-
-.cv-content {
-    display: flex;
-
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 40px;
-
-    padding: 45px;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--pink-light),
-            var(--pink-soft)
-        );
-
-    border: 1px solid var(--pink-border);
-    border-radius: 12px;
-}
-
-.cv-content h2 {
-    margin: 8px 0 12px;
-
-    font-size: 2rem;
-}
-
-.cv-content p:not(.section-label) {
-    max-width: 650px;
-
-    color: var(--text-medium);
-}
-
-
-/* ---------- Footer ---------- */
-
-.site-footer {
-    padding: 30px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 12px;
-
-    border-top: 1px solid var(--pink-border);
-
-    color: var(--text-medium);
 
     font-size: 0.9rem;
 }
 
-.footer-links {
-    display: flex;
-    gap: 8px;
+.coursework-card h4:first-of-type {
+    margin-top: 20px;
 }
 
-.footer-links a {
-    color: var(--pink-dark);
-
-    text-decoration: none;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
+.course-status {
+    color: var(--pink-dark) !important;
 }
 
 
-/* ---------- Mobile ---------- */
+/* ---------- Responsive Currently Section ---------- */
 
-@media (max-width: 850px) {
+@media (max-width: 950px) {
 
-    .nav-container {
-        flex-direction: column;
-
-        gap: 12px;
+    .current-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
     }
 
-    .navigation {
-        gap: 15px;
+}
 
-        flex-wrap: wrap;
-        justify-content: center;
-    }
 
-    .hero-content {
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }
+@media (max-width: 600px) {
 
-    .project-grid,
-    .coursework-grid {
+    .current-grid {
         grid-template-columns: 1fr;
     }
 
-    .experience-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .cv-content {
-        flex-direction: column;
-
-        align-items: flex-start;
-    }
 }
 
-
-@media (max-width: 500px) {
-
-    .navigation {
-        font-size: 0.88rem;
-    }
-
-    .hero h1 {
-        font-size: 3rem;
-    }
-
-    .hero-description {
-        font-size: 1rem;
-    }
-
-    .section,
-    .hero-content {
-        padding-left: 22px;
-        padding-right: 22px;
-    }
-
-    .section-pink {
-        padding-left: 22px;
-        padding-right: 22px;
-    }
-}
+   
